@@ -1,0 +1,1455 @@
+[
+{
+  "model": "main.country",
+  "pk": 19,
+  "fields": {
+    "name": "Королевство Эрридия",
+    "slug": "erridia",
+    "color": "#F0F0F0",
+    "flag": "/static/images/flags/erridia/erridia_flag.jpg",
+    "region_name": "Ярлства",
+    "order": 0,
+    "politics": "Торговля и установление дипломатических связей",
+    "military": "Оборона",
+    "income": "Мореплавание (исследование рун и новых земель), торговля (экспорт металлических и каменных изделий)",
+    "ruling_house": "Римсайд",
+    "current_ruler": "Эррид 5й, сын Эртена Зго",
+    "heir": "Эррин Зй",
+    "fact": "",
+    "extra_data": {
+      "language": {
+        "name": "Эрридианский (Erridian mál)",
+        "description": "Государственный язык Королевства Эрридия (Kinghavn Erridia). Третья редакция языка.",
+        "alphabet": {
+          "letters": [
+            {
+              "char": "A",
+              "sound": "[a]",
+              "desc": "Как «а» в слове «мама»"
+            },
+            {
+              "char": "B",
+              "sound": "[b]",
+              "desc": "Обычный «б»"
+            },
+            {
+              "char": "D",
+              "sound": "[d]",
+              "desc": "Твёрдый «д»"
+            },
+            {
+              "char": "Ð",
+              "sound": "[ð]",
+              "desc": "Мягкое «дь» (используется редко, ~20%)"
+            },
+            {
+              "char": "E",
+              "sound": "[ɛ]",
+              "desc": "Как русское «э» («это»)"
+            },
+            {
+              "char": "Ë",
+              "sound": "[je]",
+              "desc": "Как украинская «є» / мягкое «е»"
+            },
+            {
+              "char": "Æ",
+              "sound": "[æ]",
+              "desc": "Как в английском «cat»"
+            },
+            {
+              "char": "F",
+              "sound": "[f]",
+              "desc": "Обычный «ф»"
+            },
+            {
+              "char": "G",
+              "sound": "[g]",
+              "desc": "Обычный «г»"
+            },
+            {
+              "char": "H",
+              "sound": "[h]",
+              "desc": "Придыхательный «х»"
+            },
+            {
+              "char": "I",
+              "sound": "[i]",
+              "desc": "Как «и» в «мир»"
+            },
+            {
+              "char": "Ї",
+              "sound": "[ji]",
+              "desc": "Йотированное «йи» (поэтическая лексика)"
+            },
+            {
+              "char": "J",
+              "sound": "[j]",
+              "desc": "Как «й» в «йогурт»"
+            },
+            {
+              "char": "K",
+              "sound": "[k]",
+              "desc": "Обычный «к»"
+            },
+            {
+              "char": "L",
+              "sound": "[l]",
+              "desc": "Обычный «л»"
+            },
+            {
+              "char": "M",
+              "sound": "[m]",
+              "desc": "Обычный «м»"
+            },
+            {
+              "char": "N",
+              "sound": "[n]",
+              "desc": "Обычный «н»"
+            },
+            {
+              "char": "O",
+              "sound": "[o]",
+              "desc": "Как «о» в «дом»"
+            },
+            {
+              "char": "Ø",
+              "sound": "[ø]",
+              "desc": "«Оэ» — между «о» и «э», как нем. ö"
+            },
+            {
+              "char": "P",
+              "sound": "[p]",
+              "desc": "Обычный «п»"
+            },
+            {
+              "char": "R",
+              "sound": "[r]",
+              "desc": "Вибрирующий «р» как в русском"
+            },
+            {
+              "char": "S",
+              "sound": "[s]",
+              "desc": "Обычный «с»"
+            },
+            {
+              "char": "Š",
+              "sound": "[ʃ]",
+              "desc": "Твёрдый шипящий «ш»"
+            },
+            {
+              "char": "Ŝ",
+              "sound": "[ɕ]",
+              "desc": "Мягкий шипящий «щ»"
+            },
+            {
+              "char": "T",
+              "sound": "[t]",
+              "desc": "Обычный «т»"
+            },
+            {
+              "char": "Þ",
+              "sound": "[θ]",
+              "desc": "«Т» с придыханием (как англ. «think»)"
+            },
+            {
+              "char": "U",
+              "sound": "[u]",
+              "desc": "Как русское «у» («лук»)"
+            },
+            {
+              "char": "V",
+              "sound": "[v]",
+              "desc": "Обычный «в»"
+            },
+            {
+              "char": "Y",
+              "sound": "[y]",
+              "desc": "Как франц. «u» / нем. «ü» (между «и» и «ю»)"
+            },
+            {
+              "char": "Z",
+              "sound": "[z]",
+              "desc": "Звонкое «з»"
+            }
+          ]
+        },
+        "grammar": {
+          "suffixes": [
+            {
+              "suffix": "-er",
+              "desc": "Мужской род (druker, vakten/vakter, grader...)"
+            },
+            {
+              "suffix": "-yr",
+              "desc": "Женский род (drukyr, mannyr, kvindruk...)"
+            },
+            {
+              "suffix": "-lin",
+              "desc": "Маленькое / детёныш (kattlin, ulflin...)"
+            },
+            {
+              "suffix": "-is",
+              "desc": "Родительный или книжная форма (mális, kinghavnar...)"
+            },
+            {
+              "suffix": "-ris",
+              "desc": "Лит. / торжественная форма (einstakliris, stridaris...)"
+            },
+            {
+              "suffix": "-tis",
+              "desc": "Официально-абстрактная форма (новые слова)"
+            },
+            {
+              "suffix": "-um",
+              "desc": "Место / пост / коллективное (vaktum, narenland...)"
+            },
+            {
+              "suffix": "-ed",
+              "desc": "Будущее время 3 л. ед. ч. (ramed, skahorded...)"
+            }
+          ],
+          "pronouns": [
+            {
+              "word": "Es",
+              "desc": "Я (повседневное / официальное)"
+            },
+            {
+              "word": "Ek",
+              "desc": "Я (только ритуальное / религиозное)"
+            },
+            {
+              "word": "Du",
+              "desc": "Ты"
+            },
+            {
+              "word": "Mæs",
+              "desc": "Мы"
+            }
+          ],
+          "prepositions": [
+            {
+              "word": "Tor",
+              "desc": "Для"
+            },
+            {
+              "word": "Un / Es",
+              "desc": "В"
+            },
+            {
+              "word": "Ton",
+              "desc": "На"
+            },
+            {
+              "word": "Van",
+              "desc": "К / в направлении"
+            },
+            {
+              "word": "Naren",
+              "desc": "Под"
+            },
+            {
+              "word": "Avren",
+              "desc": "Над"
+            },
+            {
+              "word": "Melz",
+              "desc": "Между"
+            },
+            {
+              "word": "Koss",
+              "desc": "Через"
+            },
+            {
+              "word": "Var",
+              "desc": "У / около"
+            },
+            {
+              "word": "Sin",
+              "desc": "Среди"
+            },
+            {
+              "word": "Bæk / Bæken",
+              "desc": "За / позади"
+            }
+          ],
+          "naming": "Все имена жителей Эрридии начинаются с приставки Эр- (Er-) как знак уважения к народу и предкам. Имена богов (Helgrimnir, Gotvaldr, Mir'karr, Eldurin) — исключения."
+        },
+        "numbers": {
+          "units": [
+            {
+              "num": "1",
+              "word": "anet"
+            },
+            {
+              "num": "2",
+              "word": "þvin"
+            },
+            {
+              "num": "3",
+              "word": "þrín"
+            },
+            {
+              "num": "4",
+              "word": "fær"
+            },
+            {
+              "num": "5",
+              "word": "pan"
+            },
+            {
+              "num": "6",
+              "word": "šek"
+            },
+            {
+              "num": "7",
+              "word": "fjen"
+            },
+            {
+              "num": "8",
+              "word": "atte"
+            },
+            {
+              "num": "9",
+              "word": "daz"
+            }
+          ],
+          "tens": [
+            {
+              "num": "10",
+              "word": "denzet",
+              "desc": "Десяток; корень den-"
+            },
+            {
+              "num": "20",
+              "word": "þvinvet",
+              "desc": "Суффикс -vet"
+            },
+            {
+              "num": "30",
+              "word": "þrintet",
+              "desc": "Суффикс -tet"
+            },
+            {
+              "num": "40",
+              "word": "færket",
+              "desc": "Суффикс -ket"
+            },
+            {
+              "num": "50",
+              "word": "pandet",
+              "desc": "Суффикс -det"
+            },
+            {
+              "num": "60",
+              "word": "šeknet",
+              "desc": "Суффикс -net"
+            },
+            {
+              "num": "70",
+              "word": "fjeset",
+              "desc": "Суффикс -set"
+            },
+            {
+              "num": "80",
+              "word": "atmet",
+              "desc": "Суффикс -met"
+            },
+            {
+              "num": "90",
+              "word": "dazpet",
+              "desc": "Суффикс -pet"
+            }
+          ],
+          "hundreds": [
+            {
+              "num": "100",
+              "word": "ðøset"
+            },
+            {
+              "num": "200",
+              "word": "þvøset"
+            },
+            {
+              "num": "300",
+              "word": "þrøset"
+            },
+            {
+              "num": "400",
+              "word": "førset"
+            },
+            {
+              "num": "500",
+              "word": "pønset"
+            },
+            {
+              "num": "1000",
+              "word": "zetta"
+            }
+          ],
+          "rule": "Составные числа строятся: [тысячи] [сотни] [десятки+единицы]. Единицы 11–19: корень цифры + -zet."
+        },
+        "dictionary": [
+          {
+            "word": "Es",
+            "trans": "Я",
+            "desc": "Личное мест. 1 л. ед. ч.; повседневная и официальная речь"
+          },
+          {
+            "word": "Du",
+            "trans": "Ты",
+            "desc": "Личное мест. 2 л. ед. ч."
+          },
+          {
+            "word": "Mæs",
+            "trans": "Мы",
+            "desc": "Личное мест. 1 л. мн. ч."
+          },
+          {
+            "word": "Mann",
+            "trans": "Человек / мужчина",
+            "desc": "Сущ.; мн. ч. menn; с окончанием — manner"
+          },
+          {
+            "word": "Mannyr",
+            "trans": "Женщина",
+            "desc": "Сущ.; жен. форма от mann"
+          },
+          {
+            "word": "Druk",
+            "trans": "Друг",
+            "desc": "Сущ.; drukers — друзья; druker — дружелюбный"
+          },
+          {
+            "word": "Kingsum",
+            "trans": "Правитель (король/королева)",
+            "desc": "Универсальный титул"
+          },
+          {
+            "word": "Kinghavn",
+            "trans": "Королевство",
+            "desc": "Сущ. от king + havn"
+          },
+          {
+            "word": "Grad",
+            "trans": "Город",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Stragrad",
+            "trans": "Порт",
+            "desc": "Sstra + grad; «прибрежный город»"
+          },
+          {
+            "word": "Erland",
+            "trans": "Отечество / родина",
+            "desc": "Er- (народ Эрридии) + land"
+          },
+          {
+            "word": "Hass",
+            "trans": "Дом",
+            "desc": "Сущ.; hasser — домовладелец"
+          },
+          {
+            "word": "Borgum",
+            "trans": "Крепость",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Eldur",
+            "trans": "Огонь / пламя",
+            "desc": "Сущ.; elduris — огненный"
+          },
+          {
+            "word": "Solarus",
+            "trans": "Солнце",
+            "desc": "Сущ.; solaris — солнечный"
+          },
+          {
+            "word": "Lunes",
+            "trans": "Луна",
+            "desc": "Сущ.; lunelis — лунный свет"
+          },
+          {
+            "word": "Jolnir",
+            "trans": "Золото",
+            "desc": "Сущ.; jolniris — золотой"
+          },
+          {
+            "word": "Lunn",
+            "trans": "Серебро",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Eizen",
+            "trans": "Железо",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Vakten",
+            "trans": "Страж",
+            "desc": "Сущ.; vaktenyr — стражница"
+          },
+          {
+            "word": "Vint",
+            "trans": "Работать",
+            "desc": "Глагол, инфинитив"
+          },
+          {
+            "word": "Tala",
+            "trans": "Говорить",
+            "desc": "Глагол, инфинитив"
+          },
+          {
+            "word": "Vans",
+            "trans": "Идти",
+            "desc": "Глагол, инфинитив; væ — иду"
+          },
+          {
+            "word": "Lovd",
+            "trans": "Обещаю",
+            "desc": "Глагол 1 л. ед. ч.; lov — обещание"
+          },
+          {
+            "word": "Sæl",
+            "trans": "Привет (разг.)",
+            "desc": "Приветствие; sælen — «приветствую» (офиц.)"
+          },
+          {
+            "word": "Frid",
+            "trans": "Мир / покой",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Druzis",
+            "trans": "Дружба",
+            "desc": "Сущ.; высокая форма от druk"
+          },
+          {
+            "word": "Mál",
+            "trans": "Язык / речь",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Falð",
+            "trans": "Народ",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Ríki",
+            "trans": "Государство",
+            "desc": "Сущ."
+          },
+          {
+            "word": "Maht",
+            "trans": "Мощь",
+            "desc": "Сущ.; mahter — мощный"
+          },
+          {
+            "word": "Sterket",
+            "trans": "Сильный / крепкий",
+            "desc": "Прилаг."
+          },
+          {
+            "word": "Snar",
+            "trans": "Быстрый",
+            "desc": "Прилаг."
+          },
+          {
+            "word": "Gamler",
+            "trans": "Старый",
+            "desc": "Прилаг."
+          },
+          {
+            "word": "Ren",
+            "trans": "Красный",
+            "desc": "Цвет; renis — прилаг."
+          },
+          {
+            "word": "Sunn",
+            "trans": "Жёлтый",
+            "desc": "Цвет; sunnis — прилаг."
+          },
+          {
+            "word": "Zarn",
+            "trans": "Зелёный",
+            "desc": "Цвет; zarnis — прилаг."
+          },
+          {
+            "word": "Švar",
+            "trans": "Чёрный",
+            "desc": "Цвет; švaris — прилаг."
+          },
+          {
+            "word": "Fætes",
+            "trans": "Белый",
+            "desc": "Цвет; fætesis — прилаг."
+          },
+          {
+            "word": "Blaren",
+            "trans": "Синий",
+            "desc": "Цвет; blarenis — прилаг."
+          },
+          {
+            "word": "Nord",
+            "trans": "Север",
+            "desc": "Сторона света; nordir — северный"
+          },
+          {
+            "word": "Jun",
+            "trans": "Юг",
+            "desc": "Сторона света; junir — южный"
+          },
+          {
+            "word": "Zest",
+            "trans": "Запад",
+            "desc": "Сторона света; zestir — западный"
+          },
+          {
+            "word": "Vost",
+            "trans": "Восток",
+            "desc": "Сторона света; vostir — восточный"
+          }
+        ]
+      },
+      "religion": {
+        "name": "Квадар",
+        "description": "Пантеон из 4-х богов, каждый из которых отвечает за свои аспекты бытия. Формально их можно разделить на 2-х \"хороших\" и 2-х \"плохих\". Каждому богу присвоен свой орден, а также возводятся здания для поклонения.",
+        "example": "Путеводный факел в честь бога солнца Эльдурина",
+        "adopted_by": [
+          "Королевство Эрридия",
+          "Альк Кадир"
+        ],
+        "gods": [
+          {
+            "name": "Хельгримнир",
+            "title": "Бог войны, разрушения и зла",
+            "description": "Покровительствует воинам, кровавым правителям и военному ремеслу. Его можно попросить об удаче в бою или проклятия для врага."
+          },
+          {
+            "name": "Готвальдр",
+            "title": "Бог мира, добра и милосердия",
+            "description": "Покровительствует правителям, дипломатам. Дает благословение от невзгод."
+          },
+          {
+            "name": "Миркарр",
+            "title": "Бог луны, ночи и самой тьмы",
+            "description": "Покровительствует убийцам, ворам, тем кто добивается цели не смотря на жертвы."
+          },
+          {
+            "name": "Эльдурин",
+            "title": "Бог света, солнца и огня",
+            "description": "Покровительствует мирным ремеслам, познанию нового и саморазвитию."
+          }
+        ]
+      },
+      "jarlstvos": [
+        {
+          "name": "Ярлство Раустен",
+          "tings": [
+            {
+              "name": "Райстенмар",
+              "flag": "/static/images/flags/erridia/ting_raistenmar.png",
+              "desc": "Тингство Райстенмар"
+            },
+            {
+              "name": "Луннаталлен",
+              "flag": "/static/images/flags/erridia/ting_lunnatalia.png",
+              "desc": "Тингство Луннаталлен"
+            },
+            {
+              "name": "Кантерия",
+              "flag": "/static/images/flags/erridia/ting_kanteria.png",
+              "desc": "Тингство Кантерия"
+            }
+          ]
+        },
+        {
+          "name": "Ярлство Тейден",
+          "tings": [
+            {
+              "name": "Тейден Энн-Кастри",
+              "flag": "/static/images/flags/erridia/ting_teyden.png",
+              "desc": "Тингство Тейден Энн-Кастри"
+            },
+            {
+              "name": "Тейден Энн-Фод",
+              "flag": "/static/images/flags/erridia/ting_teyden_fod.png",
+              "desc": "Тингство Тейден Энн-Фод"
+            }
+          ]
+        },
+        {
+          "name": "Ярлство Альден",
+          "tings": [
+            {
+              "name": "Тарнор",
+              "flag": "/static/images/flags/erridia/ting_tarnor.png",
+              "desc": "Тингство Тарнор"
+            },
+            {
+              "name": "Хаустен",
+              "flag": "/static/images/flags/erridia/ting_hausten.png",
+              "desc": "Тингство Хаустен"
+            },
+            {
+              "name": "Фьяград",
+              "flag": "/static/images/flags/erridia/ting_fjagrad.png",
+              "desc": "Тингство Фьяград"
+            },
+            {
+              "name": "Нектаррен",
+              "flag": "/static/images/flags/erridia/ting_nektarren.png",
+              "desc": "Тингство Нектаррен"
+            }
+          ]
+        },
+        {
+          "name": "Ярлство Фоссен",
+          "tings": [
+            {
+              "name": "Фосскофград",
+              "flag": "/static/images/flags/erridia/ting_fosskofgrad.png",
+              "desc": "Тингство Фосскофград"
+            },
+            {
+              "name": "Хаффенвирланд",
+              "flag": "/static/images/flags/erridia/ting_haffenvirland.png",
+              "desc": "Тингство Хаффенвирланд"
+            }
+          ]
+        },
+        {
+          "name": "Ярлство Бронтен",
+          "tings": [
+            {
+              "name": "Соларрен",
+              "flag": "/static/images/flags/erridia/ting_solarren.png",
+              "desc": "Тингство Соларрен"
+            },
+            {
+              "name": "Фискград",
+              "flag": "/static/images/flags/erridia/ting_fiskgrad.png",
+              "desc": "Тингство Фискград"
+            },
+            {
+              "name": "Готвальдрен-Хусс",
+              "flag": "/static/images/flags/erridia/ting_gotvaldren_huss.png",
+              "desc": "Тингство Готвальдрен-Хусс"
+            }
+          ]
+        }
+      ]
+    }
+  }
+},
+{
+  "model": "main.country",
+  "pk": 20,
+  "fields": {
+    "name": "Королевство Элора",
+    "slug": "elora",
+    "color": "#5DBCD2",
+    "flag": "/static/images/flags/elora/elora_flag.jpg",
+    "region_name": "Регионы",
+    "order": 0,
+    "politics": "Торговля, Дипломатия",
+    "military": "Миролюбивая (оборонительная)",
+    "income": "Торговля: Доставка провизии, рыболовство, наёмничество",
+    "ruling_house": "Элорианы",
+    "current_ruler": "Элориан Фулми",
+    "heir": "Отсутствует",
+    "fact": "Народ, который на данный момент проживает в Королевстве Элора, пришёл с далёких южных земель с целью найти идеальное место для проживания. Также во всём мире (на данный момент) существует только одна гильдия наёмников. Эти наёмники обученные в лучших королевских академиях, потому за достойную плату они способны на многое.",
+    "extra_data": {
+      "general_info": {
+        "language": "Русский (официальный)",
+        "religion": "Католичество"
+      }
+    }
+  }
+},
+{
+  "model": "main.country",
+  "pk": 21,
+  "fields": {
+    "name": "Королевство Соленор",
+    "slug": "solennor",
+    "color": "#111111",
+    "flag": "/static/images/flags/solennor/solennor_flag.jpg",
+    "region_name": "Уделы",
+    "order": 0,
+    "politics": "Религия, торговля",
+    "military": "Нейтралитет (оборонительная)",
+    "income": "Клирикство: медицина, алхимия. Торговля: Продажа угля, лекарств.",
+    "ruling_house": "Soulid'Un (Солидан)",
+    "current_ruler": "Годрик Солидан",
+    "heir": "Эррик Солидан; Годлинк Солидан",
+    "fact": "В стране идёт священная война с теневым подземным народом. Обеими сторонами было решено заморозить конфликт и изолироваться друг от друга.",
+    "extra_data": {
+      "general_info": {
+        "language": "Английский (государственный); Эрридианский (международный)",
+        "religion": "Light Shrine (храм света)"
+      }
+    }
+  }
+},
+{
+  "model": "main.country",
+  "pk": 22,
+  "fields": {
+    "name": "Валкарионская Империя",
+    "slug": "valkarion",
+    "color": "#6b6b6b",
+    "flag": "/static/images/flags/valkarion/valkarion_flag.jpg",
+    "region_name": "Провинции",
+    "order": 0,
+    "politics": "Торговля, гибкая дипломатия",
+    "military": "Оборона, мирный захват нейтральных земель",
+    "income": "Торговля, наёмные инженеры",
+    "ruling_house": "Вальденны",
+    "current_ruler": "Арден 3-й Вальденн",
+    "heir": "Верик 1-й Вальденн",
+    "fact": "Народ Валкариона пришёл с холодных северо-западных земель около 300 лет назад, ведомый вождем Альдреем Вальденном. Они обнаружили древний Замок, стоящий на скале над морем — сооружение, которое существовало до появления человечества. В 1282 году королевство Альдреймар было преобразовано в Валкарионскую Империю, столица перенесена в Валкарион.",
+    "extra_data": {
+      "general_info": {
+        "language": "Общий, альдреймарский",
+        "religion": "Крепь Начала"
+      },
+      "religion_detail": {
+        "name": "Религия - Крепь Начала",
+        "description": "Первый Замок — это древнее и непостижимое строение, возникшее до появления человечества. Люди не построили его, он был всегда. Он стоит в мире или вне его, и служит опорой самой реальности. Верующие считают, что именно из Замка \"вытек свет порядка\", и мир начал строиться вокруг него — как город вокруг крепости. Замок не бог, но он — первая форма, из которой родился порядок.",
+        "beliefs": "Люди — задача мира. Лишь поздние гости в этом мире, и их цель — строить и беречь, как Замок берёг начало. Всё, что устойчиво, симметрично, выстроено, приближает к Замку. Крепь Начала не требует поклонения, но учит наблюдать, строить и понимать. Главное — передавать знание, строить города, укреплять стены (моральные, не только физические). Уважение к тишине, к симметрии, к мастерству — форма молитвы."
+      }
+    }
+  }
+},
+{
+  "model": "main.country",
+  "pk": 23,
+  "fields": {
+    "name": "Королевство Удов",
+    "slug": "udov",
+    "color": "#5EEAD4",
+    "flag": "/static/images/flags/udov/udov_flag.jpg",
+    "region_name": "Уезды",
+    "order": 8,
+    "politics": "Взаимопомощь и невмешательство",
+    "military": "Оборона",
+    "income": "Аренда земли для порта ИВД (Империю Великих Домов) и продажа берёзы",
+    "ruling_house": "Неизвестен",
+    "current_ruler": "Король Батько-Зелёный",
+    "heir": "Неизвестен",
+    "fact": "",
+    "extra_data": {}
+  }
+},
+{
+  "model": "main.country",
+  "pk": 24,
+  "fields": {
+    "name": "Альк Кадир",
+    "slug": "alk-kadir",
+    "color": "#D4AF37",
+    "flag": "/static/images/flags/alk-kadir/alk-kadir_flag.jpg",
+    "region_name": "Регионы",
+    "order": 0,
+    "politics": "Торговля, Дипломатия",
+    "military": "Миролюбивая (оборонительная)",
+    "income": "Торговля: Доставка металла, инструментов, стройматериалов, драгоценных металлов и изделий из них.",
+    "ruling_house": "Лодгар",
+    "current_ruler": "Грун Лодгар",
+    "heir": "Отсутствует",
+    "fact": "Кадирцы заняли горы после долгих скитаний в надежде на спасение. Поначалу это должен был быть перевалочный пункт для продвижения в более пригодные для жизни места, но в итоге путь их был завершён, и они основали поселение Альк Кадир. С тех пор род Лодгаров правит в этих землях.",
+    "extra_data": {
+      "general_info": {
+        "language": "Русский (официальный)",
+        "religion": "Квадар"
+      },
+      "religion": {
+        "name": "Квадар",
+        "description": "Пантеон из 4-х богов, каждый из которых отвечает за свои аспекты бытия. Формально их можно разделить на 2-х \"хороших\" и 2-х \"плохих\". Каждому богу присвоен свой орден, а также возводятся здания для поклонения.",
+        "example": "Путеводный факел в честь бога солнца Эльдурина",
+        "adopted_by": [
+          "Королевство Эрридия",
+          "Королевство Соленор",
+          "Альк Кадир"
+        ],
+        "gods": [
+          {
+            "name": "Хельгримнир",
+            "title": "Бог войны, разрушения и зла",
+            "description": "Покровительствует воинам, кровавым правителям и военному ремеслу. Его можно попросить об удаче в бою или проклятия для врага."
+          },
+          {
+            "name": "Готвальдр",
+            "title": "Бог мира, добра и милосердия",
+            "description": "Покровительствует правителям, дипломатам. Дает благословение от невзгод."
+          },
+          {
+            "name": "Миркарр",
+            "title": "Бог луны, ночи и самой тьмы",
+            "description": "Покровительствует убийцам, ворам, тем кто добивается цели не смотря на жертвы."
+          },
+          {
+            "name": "Эльдурин",
+            "title": "Бог света, солнца и огня",
+            "description": "Покровительствует мирным ремеслам, познанию нового и саморазвитию."
+          }
+        ]
+      }
+    }
+  }
+},
+{
+  "model": "main.country",
+  "pk": 25,
+  "fields": {
+    "name": "Империя Великих Домов",
+    "slug": "great-houses",
+    "color": "#1E3A8A",
+    "flag": "/static/images/flags/great-houses/great-houses_flag.jpg",
+    "region_name": "Великие Дома",
+    "order": 0,
+    "politics": "Распространение влияния, содействие ассоциации с федерацией",
+    "military": "Защита интересов государства, союзников и их оборона",
+    "income": "Сбор податей, кузнечное дело",
+    "ruling_house": "Демидовы",
+    "current_ruler": "Михаил Демидов",
+    "heir": "",
+    "fact": "Имеет федеративное устройство",
+    "extra_data": {
+      "uezds": [
+        "Туфский",
+        "Александрийский",
+        "Поляновский",
+        "Солнцегорский",
+        "Гвоздевский",
+        "Гидицкий",
+        "Галицкий",
+        "Чорнопольский",
+        "Высоколесский",
+        "Цареград",
+        "Великомуромский",
+        "Кайский",
+        "Руницкий",
+        "Жигинский",
+        "Соколиный",
+        "Щукинский",
+        "о. Тихий",
+        "Зелёноборский",
+        "Миценский",
+        "Ярский",
+        "Рижский",
+        "Вежайский"
+      ]
+    }
+  }
+},
+{
+  "model": "main.country",
+  "pk": 26,
+  "fields": {
+    "name": "Королевство Алиола",
+    "slug": "aliola",
+    "color": "#8B5CF6",
+    "flag": "/static/images/flags/aliola/aliola_flag.jpg",
+    "region_name": "Регионы",
+    "order": 0,
+    "politics": "Взаимопомощь и невмешательство",
+    "military": "Оборона",
+    "income": "Экспорт экзотических товаров в ИВД (Империю Великих Домов)",
+    "ruling_house": "Неизвестен",
+    "current_ruler": "Неизвестен",
+    "heir": "Неизвестен",
+    "fact": "",
+    "extra_data": {}
+  }
+},
+{
+  "model": "main.region",
+  "pk": 60,
+  "fields": {
+    "country": 19,
+    "name": "Раустен",
+    "flag": "/static/images/flags/erridia/erridia_rausten.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 61,
+  "fields": {
+    "country": 19,
+    "name": "Тейден",
+    "flag": "/static/images/flags/erridia/erridia_teyden.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 62,
+  "fields": {
+    "country": 19,
+    "name": "Альден",
+    "flag": "/static/images/flags/erridia/erridia_alden.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 63,
+  "fields": {
+    "country": 19,
+    "name": "Фоссен",
+    "flag": "/static/images/flags/erridia/erridia_fossen.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 64,
+  "fields": {
+    "country": 19,
+    "name": "Бронтен",
+    "flag": "/static/images/flags/erridia/erridia_bronten.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 65,
+  "fields": {
+    "country": 20,
+    "name": "Аурлин",
+    "flag": "/static/images/flags/elora/elora_aurlin.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 66,
+  "fields": {
+    "country": 20,
+    "name": "Вальдрейн",
+    "flag": "/static/images/flags/elora/elora_valdrain.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 67,
+  "fields": {
+    "country": 20,
+    "name": "Селестария",
+    "flag": "/static/images/flags/elora/elora_celestaria.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 68,
+  "fields": {
+    "country": 20,
+    "name": "Мирвелл",
+    "flag": "/static/images/flags/elora/elora_mirvell.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 69,
+  "fields": {
+    "country": 20,
+    "name": "Генерис",
+    "flag": "/static/images/flags/elora/elora_generis.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 70,
+  "fields": {
+    "country": 21,
+    "name": "Флэймхолд",
+    "flag": "/static/images/flags/solennor/solennor_flamehold.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 71,
+  "fields": {
+    "country": 21,
+    "name": "Солерсэт",
+    "flag": "/static/images/flags/solennor/solennor_solersat.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 72,
+  "fields": {
+    "country": 22,
+    "name": "Мирелар",
+    "flag": "/static/images/flags/valkarion/valkarion_mirelar.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 73,
+  "fields": {
+    "country": 22,
+    "name": "Варгхейм",
+    "flag": "/static/images/flags/valkarion/valkarion_vargheim.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 74,
+  "fields": {
+    "country": 22,
+    "name": "Айрдола",
+    "flag": "/static/images/flags/valkarion/valkarion_airdola.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 75,
+  "fields": {
+    "country": 22,
+    "name": "Гарнхольд",
+    "flag": "/static/images/flags/valkarion/valkarion_garnhold.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 76,
+  "fields": {
+    "country": 22,
+    "name": "Ревенпорт",
+    "flag": "/static/images/flags/valkarion/valkarion_revenport.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 77,
+  "fields": {
+    "country": 22,
+    "name": "Фальден",
+    "flag": "/static/images/flags/valkarion/valkarion_falden.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 78,
+  "fields": {
+    "country": 22,
+    "name": "Клинмор",
+    "flag": "/static/images/flags/valkarion/valkarion_klinmor.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 79,
+  "fields": {
+    "country": 22,
+    "name": "Валкарион",
+    "flag": "/static/images/flags/valkarion/valkarion_valkarion.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 80,
+  "fields": {
+    "country": 22,
+    "name": "Варелон",
+    "flag": "/static/images/flags/valkarion/valkarion_varelon.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 81,
+  "fields": {
+    "country": 22,
+    "name": "Тальверайн",
+    "flag": "/static/images/flags/valkarion/valkarion_talverayn.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 82,
+  "fields": {
+    "country": 22,
+    "name": "Элкард",
+    "flag": "/static/images/flags/valkarion/valkarion_elcard.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 83,
+  "fields": {
+    "country": 23,
+    "name": "Березовский уезд",
+    "flag": "/static/images/flags/udov/udov_berezovsky.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 84,
+  "fields": {
+    "country": 23,
+    "name": "Златокаменский уезд",
+    "flag": "/static/images/flags/udov/udov_zlatokamensky.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 85,
+  "fields": {
+    "country": 24,
+    "name": "Дурмак",
+    "flag": "/static/images/flags/alk-kadir/alk-kadir_durmak.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 86,
+  "fields": {
+    "country": 24,
+    "name": "Громнигр",
+    "flag": "/static/images/flags/alk-kadir/alk-kadir_gromnigr.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 87,
+  "fields": {
+    "country": 24,
+    "name": "Жуланбур",
+    "flag": "/static/images/flags/alk-kadir/alk-kadir_zhulanburg.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 88,
+  "fields": {
+    "country": 24,
+    "name": "Нижний Нарклаг",
+    "flag": "/static/images/flags/alk-kadir/alk-kadir_nizhny_narklag.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 89,
+  "fields": {
+    "country": 24,
+    "name": "Верхний Нарклаг",
+    "flag": "/static/images/flags/alk-kadir/alk-kadir_verhny_narklag.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 90,
+  "fields": {
+    "country": 25,
+    "name": "Демидовы",
+    "flag": "/static/images/flags/great-houses/great-houses_demidov.png",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 91,
+  "fields": {
+    "country": 25,
+    "name": "Бугарищевы",
+    "flag": "/static/images/flags/great-houses/great-houses_bugarishchev.png",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 92,
+  "fields": {
+    "country": 25,
+    "name": "Гуляевы",
+    "flag": "/static/images/flags/great-houses/great-houses_gulyaev.png",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 93,
+  "fields": {
+    "country": 25,
+    "name": "Крутовы",
+    "flag": "/static/images/flags/great-houses/great-houses_krutov.png",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 94,
+  "fields": {
+    "country": 25,
+    "name": "Пугачи",
+    "flag": "/static/images/flags/great-houses/great-houses_pugachi.png",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 95,
+  "fields": {
+    "country": 26,
+    "name": "Алион",
+    "flag": "/static/images/flags/aliola/aliola_alion.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 96,
+  "fields": {
+    "country": 26,
+    "name": "Кеймур",
+    "flag": "/static/images/flags/aliola/aliola_keymour.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.region",
+  "pk": 97,
+  "fields": {
+    "country": 26,
+    "name": "Вейласта",
+    "flag": "/static/images/flags/aliola/aliola_veilasta.jpg",
+    "description": ""
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "country": 19
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "country": 24
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 3,
+  "fields": {
+    "user": 4,
+    "country": 22
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 4,
+  "fields": {
+    "user": 5,
+    "country": 25
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 5,
+  "fields": {
+    "user": 6,
+    "country": 21
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 6,
+  "fields": {
+    "user": 7,
+    "country": 23
+  }
+},
+{
+  "model": "main.countryaccess",
+  "pk": 7,
+  "fields": {
+    "user": 8,
+    "country": 26
+  }
+},
+{
+  "model": "main.alliance",
+  "pk": 1,
+  "fields": {
+    "name": "Военная Транс-Океаническая Коалиция",
+    "slug": "vtc",
+    "flag": "/static/images/alliances/vtc_flag.jpg",
+    "goal": "Укрепление взаимосвязей между текущей сферой влияний ИВД (Империи Великих Домов)",
+    "alliance_type": "Экономическое, Военное",
+    "members": [
+      23,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "main.alliance",
+  "pk": 3,
+  "fields": {
+    "name": "Северный Союз",
+    "slug": "northern-union",
+    "flag": "/static/images/alliances/northern_union_flag.jpg",
+    "goal": "На данный момент союз подразумевает экономическую и военную взаимопомощь, торговый пакт, пакт о взаимодействии и пакт о ненападении.",
+    "alliance_type": "Военное, Экономическое, Торговое",
+    "members": [
+      19,
+      21,
+      22,
+      24
+    ]
+  }
+},
+{
+  "model": "main.alliance",
+  "pk": 4,
+  "fields": {
+    "name": "Северная Ассоциация",
+    "slug": "northern-association",
+    "flag": "/static/images/alliances/northern_assoc_flag.jpg",
+    "goal": "Привлечение новых потенциальных союзников в Северный Союз. Создание благоприятной контролируемой торговой среды.",
+    "alliance_type": "Торговое, Экономическое",
+    "members": [
+      19,
+      20,
+      21,
+      22,
+      24
+    ]
+  }
+}
+]

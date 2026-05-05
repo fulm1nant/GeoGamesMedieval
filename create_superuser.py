@@ -5,18 +5,15 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'GeoGamesMedieval.settings')
 django.setup()
 
-# 2. Только ПОСЛЕ этого импортируем модели
+# 2. И только ПОСЛЕ этого импортируем User
 from django.contrib.auth.models import User
 
-# 3. Логика создания
 if not User.objects.filter(username='admin').exists():
     User.objects.create_superuser(
         username='admin',
-        email='',
+        email='admin@geogames.ru',
         password='$RFV5tgb^YHN'
     )
-    print("✅ Суперпользователь создан!")
-    print("   Логин: admin")
-    print("   Пароль: $RFV5tgb^YHN")
+    print("✅ Суперпользователь создан: admin / $RFV5tgb^YHN")
 else:
-    print("ℹ️ Суперпользователь уже существует.")
+    print("ℹ️ Пользователь уже существует.")

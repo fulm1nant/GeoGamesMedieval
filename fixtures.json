@@ -1346,62 +1346,6 @@
   }
 },
 {
-  "model": "main.countryaccess",
-  "pk": 1,
-  "fields": {
-    "user": 2,
-    "country": 19
-  }
-},
-{
-  "model": "main.countryaccess",
-  "pk": 2,
-  "fields": {
-    "user": 3,
-    "country": 24
-  }
-},
-{
-  "model": "main.countryaccess",
-  "pk": 3,
-  "fields": {
-    "user": 4,
-    "country": 22
-  }
-},
-{
-  "model": "main.countryaccess",
-  "pk": 4,
-  "fields": {
-    "user": 5,
-    "country": 25
-  }
-},
-{
-  "model": "main.countryaccess",
-  "pk": 5,
-  "fields": {
-    "user": 6,
-    "country": 21
-  }
-},
-{
-  "model": "main.countryaccess",
-  "pk": 6,
-  "fields": {
-    "user": 7,
-    "country": 23
-  }
-},
-{
-  "model": "main.countryaccess",
-  "pk": 7,
-  "fields": {
-    "user": 8,
-    "country": 26
-  }
-},
-{
   "model": "main.alliance",
   "pk": 1,
   "fields": {

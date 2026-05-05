@@ -14,7 +14,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-key-change-in-p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
+# Разрешенные хосты (читает из переменных Railway)
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+
+# Доверенные источники для CSRF (обязательно для Railway!)
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.up.railway.app',
+    'https://*.railway.app',
+]
 
 # Application definition
 INSTALLED_APPS = [

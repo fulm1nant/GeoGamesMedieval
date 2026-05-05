@@ -1,19 +1,22 @@
 import os
 import django
-from django.contrib.auth.models import User
 
+# 1. Сначала настраиваем Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'GeoGamesMedieval.settings')
 django.setup()
 
-# Создаём суперпользователя
+# 2. Только ПОСЛЕ этого импортируем модели
+from django.contrib.auth.models import User
+
+# 3. Логика создания
 if not User.objects.filter(username='admin').exists():
     User.objects.create_superuser(
         username='admin',
-        email='admin@geogames.ru',  # можешь поменять на свой
-        password='admin123'          # пароль (поменяй потом в админке!)
+        email='',
+        password='$RFV5tgb^YHN'
     )
     print("✅ Суперпользователь создан!")
     print("   Логин: admin")
-    print("   Пароль: admin123")
+    print("   Пароль: $RFV5tgb^YHN")
 else:
     print("ℹ️ Суперпользователь уже существует.")

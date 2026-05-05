@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ country.name }} — GeoGamesMedieval{% endblock %}
+
+{% block content %}
+<!-- Герой секция с названием страны и флагом -->
+<section class="country-hero" style="border-top: 5px solid {{ country.color }};">
+    <div class="container">
+        <a href="{% url 'main:states' %}" class="back-link">
+            <i class="fas fa-arrow-left"></i> Назад к государствам
+        </a>
+
+        <div class="country-card-with-flag">
+            {% if country.flag %}
+            <div class="country-flag-background" style="background-image: url('{{ country.flag }}');"></div>
+            {% endif %}
+            <div class="country-card-content">
+                <div class="country-icon-wrapper">
+                    <i class="fas fa-crown" style="color: {{ country.color }};"></i>
+                </div>
+                <h1 class="country-title">{{ country.name }}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if country.general_info %}
+<!-- Общая информация -->
+<section class="section country-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-scroll"></i> Общая информация
+        </h2>
+
+        <div class="info-grid-2">
+            <div class="info-block">
+                {% if country.general_info.politics %}
+                <h3><i class="fas fa-landmark"></i> Политика</h3>
+                <p>{{ country.general_info.politics }}</p>
+                {% endif %}
+
+                {% if country.general_info.military %}
+                <h3><i class="fas fa-shield-alt"></i> Военная политика</h3>
+                <p>{{ country.general_info.military }}</p>
+                {% endif %}
+
+                {% if country.general_info.income %}
+                <h3><i class="fas fa-coins"></i> Источник дохода</h3>
+                <p>{{ country.general_info.income }}</p>
+                {% endif %}
+            </div>
+
+            <div class="info-block">
+                {% if country.general_info.ruling_house %}
+                <h3><i class="fas fa-crown"></i> Правящий род</h3>
+                <p class="highlight">{{ country.general_info.ruling_house }}</p>
+                {% endif %}
+
+                {% if country.general_info.current_ruler %}
+                <h3><i class="fas fa-user-tie"></i> Текущий правитель</h3>
+                <p class="highlight">{{ country.general_info.current_ruler }}</p>
+                {% endif %}
+
+                {% if country.general_info.heir %}
+                <h3><i class="fas fa-user"></i> Наследник</h3>
+                <p class="highlight">{{ country.general_info.heir }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+
+
+        <!-- Интересный факт (появится только если есть в данных) -->
+        {% if country.general_info.fact %}
+        <div class="fact-block">
+            <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+            <p>{{ country.general_info.fact }}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{% if country.religion %}
+<!-- Религия -->
+<section class="section country-section religion-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-pray"></i> Религия — {{ country.religion.name }}
+        </h2>
+
+        <div class="religion-intro">
+            {% if country.religion.adopted_by %}
+            <p><strong>Принята государственной в:</strong> {{ country.religion.adopted_by|join:", " }}</p>
+            {% endif %}
+            <p>{{ country.religion.description }}</p>
+            {% if country.religion.example %}
+            <p><em>Пример: {{ country.religion.example }}</em></p>
+            {% endif %}
+        </div>
+
+        {% if country.religion.gods %}
+        <h3 class="gods-title">Боги пантеона</h3>
+        <div class="gods-grid">
+            {% for god in country.religion.gods %}
+            <div class="god-card">
+                <h4>{{ god.name }}</h4>
+                <p class="god-title">{{ god.title }}</p>
+                <p class="god-description">{{ god.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{% if country.religion_detail %}
+<!-- Религия Валкариона -->
+<section class="section country-section religion-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-landmark"></i> {{ country.religion_detail.name }}
+        </h2>
+
+        <div class="religion-intro">
+            <p>{{ country.religion_detail.description }}</p>
+            {% if country.religion_detail.beliefs %}
+            <p><strong>Верования:</strong> {{ country.religion_detail.beliefs }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Регионы -->
+{% if country.regions %}
+<section class="section country-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-map"></i>
+            {% if country.region_name %}{{ country.region_name }}{% else %}Регионы{% endif %}
+        </h2>
+
+        <div class="regions-grid">
+            {% for region in country.regions %}
+            <div class="region-card">
+                <div class="region-flag">
+                    <img src="{{ region.flag }}" alt="Флаг {{ region.name }}" onerror="this.style.display='none'">
+                </div>
+                <h3>{{ region.name }}</h3>
+                {% if region.description %}
+                <p>{{ region.description }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Уезды ИВД -->
+{% if country.uezds %}
+<section class="section country-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-map-marked-alt"></i> Уезды Империи
+        </h2>
+
+        <div class="uezd-list">
+            {% for uezd in country.uezds %}
+            <div class="uezd-item">
+                <i class="fas fa-chevron-right"></i>
+                <span>{{ uezd }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Тингства (Структурированные по Ярлствам) -->
+{% if country.jarlstvos %}
+<section class="section country-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-shield-alt"></i> Тингства
+        </h2>
+        <p class="section-subtitle" style="margin-top: 0;">Административные округа</p>
+
+        {% for jarlstvo in country.jarlstvos %}
+        <div class="jarlstvo-container scroll-reveal">
+            <div class="jarlstvo-header">
+                <h3 class="jarlstvo-title">{{ jarlstvo.name }}</h3>
+            </div>
+
+            <div class="tings-grid">
+                {% for ting in jarlstvo.tings %}
+                <div class="ting-card">
+                    <div class="ting-flag">
+                        <img src="{{ ting.flag }}" alt="Флаг {{ ting.name }}">
+                    </div>
+                    <div class="ting-info">
+                        <h4 class="ting-name">{{ ting.name }}</h4>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Язык (всегда в конце) -->
+{% if country.language %}
+<section class="section country-section language-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-language"></i> Язык — {{ country.language.name }}
+        </h2>
+
+        <div class="language-intro">
+            <p>{{ country.language.description }}</p>
+        </div>
+
+        <!-- Алфавит -->
+        {% if country.language.alphabet %}
+        <div class="language-block">
+            <h3><i class="fas fa-font"></i> Алфавит</h3>
+            <div class="alphabet-grid">
+                {% for letter in country.language.alphabet.letters %}
+                <div class="alphabet-card">
+                    <div class="alphabet-char">{{ letter.char }}</div>
+                    <div class="alphabet-sound">{{ letter.sound }}</div>
+                    <div class="alphabet-desc">{{ letter.desc }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Грамматика -->
+        {% if country.language.grammar %}
+        <div class="language-block">
+            <h3><i class="fas fa-book"></i> Грамматика</h3>
+
+            <h4>Суффиксы</h4>
+            <div class="grammar-list">
+                {% for suffix in country.language.grammar.suffixes %}
+                <div class="grammar-item">
+                    <code>{{ suffix.suffix }}</code> — {{ suffix.desc }}
+                </div>
+                {% endfor %}
+            </div>
+
+            <h4>Местоимения</h4>
+            <div class="grammar-list">
+                {% for pronoun in country.language.grammar.pronouns %}
+                <div class="grammar-item">
+                    <code>{{ pronoun.word }}</code> — {{ pronoun.desc }}
+                </div>
+                {% endfor %}
+            </div>
+
+            <h4>Предлоги</h4>
+            <div class="grammar-list">
+                {% for prep in country.language.grammar.prepositions %}
+                <div class="grammar-item">
+                    <code>{{ prep.word }}</code> — {{ prep.desc }}
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if country.language.grammar.naming %}
+            <div class="language-note">
+                <i class="fas fa-info-circle"></i>
+                <p>{{ country.language.grammar.naming }}</p>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Числа -->
+        {% if country.language.numbers %}
+        <div class="language-block">
+            <h3><i class="fas fa-calculator"></i> Числа</h3>
+            {% if country.language.numbers.rule %}
+            <p class="language-note-text">{{ country.language.numbers.rule }}</p>
+            {% endif %}
+
+            <h4>Единицы</h4>
+            <div class="numbers-grid">
+                {% for num in country.language.numbers.units %}
+                <div class="number-item">
+                    <span class="number-value">{{ num.num }}</span>
+                    <code>{{ num.word }}</code>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h4>Десятки</h4>
+            <div class="numbers-grid">
+                {% for num in country.language.numbers.tens %}
+                <div class="number-item">
+                    <span class="number-value">{{ num.num }}</span>
+                    <code>{{ num.word }}</code>
+                    {% if num.desc %}<span class="number-desc">{{ num.desc }}</span>{% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <h4>Сотни и тысячи</h4>
+            <div class="numbers-grid">
+                {% for num in country.language.numbers.hundreds %}
+                <div class="number-item">
+                    <span class="number-value">{{ num.num }}</span>
+                    <code>{{ num.word }}</code>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Словарь -->
+        {% if country.language.dictionary %}
+        <div class="language-block">
+            <h3><i class="fas fa-dictionary"></i> Основной словарь</h3>
+            <div class="dictionary-grid">
+                {% for entry in country.language.dictionary %}
+                <div class="dictionary-item">
+                    <code class="dict-word">{{ entry.word }}</code>
+                    <span class="dict-trans">{{ entry.trans }}</span>
+                    {% if entry.desc %}
+                    <span class="dict-desc">{{ entry.desc }}</span>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+{% endblock %}

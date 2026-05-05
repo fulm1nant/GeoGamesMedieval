@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}GeoGames Industrial{% endblock %}
+
+{% block content %}
+<section class="industrial-wrapper">
+
+    <!-- ФОН: Вращающаяся шестерня и куб по центру -->
+    <div class="ind-bg-layer">
+        <!-- Шестерня (вращается) -->
+        <img src="{% static 'images/industrial_gear.png' %}" class="ind-gear">
+        <!-- Куб (статично в центре) -->
+        <img src="{% static 'images/industrial_cube.png' %}" class="ind-cube">
+    </div>
+
+    <!-- ПЕРЕДНИЙ ПЛАН: Текст и лого (поверх фона) -->
+    <div class="ind-content-layer">
+        <a href="{% url 'main:index' %}" class="back-link">
+            <i class="fas fa-arrow-left"></i> На главную
+        </a>
+
+        <!-- Большое лого -->
+        <div class="ind-title-logo">
+            <img src="{% static 'images/industrial_logo_text.png' %}" alt="GeoGames Industrial">
+        </div>
+
+        <h2 class="ind-subtitle">Добро пожаловать в мир технологий!</h2>
+        <p class="ind-desc">
+            GeoGames Industrial — это сервер, где механика правит миром.
+            Стройте заводы, добывайте ресурсы, автоматизируйте процессы.
+        </p>
+
+        <div class="status-badge">
+            <span class="dot"></span> Сервер в разработке
+        </div>
+    </div>
+</section>
+{% endblock %}

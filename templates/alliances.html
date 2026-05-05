@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Союзы — GeoGames{% endblock %}
+
+{% block content %}
+<section class="section alliances-page">
+    <div class="container">
+
+        <a href="{% url 'main:states' %}" class="back-link">
+            <i class="fas fa-arrow-left"></i> Назад к государствам
+        </a>
+
+        <h1 class="section-title scroll-reveal">
+            <i class="fas fa-handshake"></i> Союзы и объединения
+        </h1>
+        <p class="section-subtitle scroll-reveal">
+            Военные, торговые и дипломатические союзы мира
+        </p>
+
+        <div class="alliances-grid">
+            {% for alliance in alliances %}
+            <div class="alliance-card scroll-reveal">
+
+                <!-- Флаг (теперь видно полностью) -->
+                <div class="alliance-flag-wrapper">
+                    <img src="{{ alliance.flag }}" alt="{{ alliance.name }}">
+                </div>
+
+                <!-- Контент -->
+                <div class="alliance-body">
+
+                    <!-- Тип союза перенесли сюда -->
+                    <div class="alliance-type-tag">{{ alliance.alliance_type }}</div>
+
+                    <h3>{{ alliance.name }}</h3>
+                    <p class="alliance-goal">{{ alliance.goal }}</p>
+
+                    <div class="alliance-members">
+                        <span>Участники:</span>
+                        <ul>
+                            {% for member in alliance.members.all %}
+                            <li>{{ member.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p style="text-align:center; color:#888;">Союзов пока нет.</p>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endblock %}

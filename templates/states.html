@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Государства — GeoGamesMedieval{% endblock %}
+
+{% block content %}
+<section class="section states" id="states">
+    <div class="container">
+        <h1 class="section-title scroll-reveal">
+            <i class="fas fa-flag"></i> Государства сервера
+        </h1>
+        <p class="section-subtitle scroll-reveal">
+            Познакомьтесь с государствами нашего мира
+        </p>
+
+        <!-- Навигация: Союзы и объединения -->
+        <div class="alliances-nav scroll-reveal" style="text-align: center; margin-bottom: 2rem;">
+            <a href="{% url 'main:alliances' %}" class="btn-alliances">
+                <i class="fas fa-handshake"></i> Союзы и объединения
+            </a>
+        </div>
+
+        <!-- Карточки государств -->
+        <div class="states-grid">
+            {% for country in countries %}
+            <a href="{% url 'main:country_detail' country.slug %}" class="state-card-link scroll-reveal">
+                <div class="state-card">
+                    {% if country.flag %}
+                    <div class="state-flag-bg" style="background-image: url('{{ country.flag }}');"></div>
+                    {% endif %}
+                    <div class="state-header" style="border-top: 4px solid {{ country.color }};">
+                        <i class="fas fa-crown state-icon"></i>
+                    </div>
+                    <div class="state-body">
+                        <h3 class="state-name">{{ country.name }}</h3>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollReveal();
+});
+</script>
+{% endblock %}

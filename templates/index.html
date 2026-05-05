@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная — GeoGamesMedieval{% endblock %}
+
+{% block content %}
+<!-- Герой-секция с фоном -->
+<section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content scroll-reveal">
+        <h1 class="hero-title">
+            <i class="fas fa-crown"></i>
+            GeoGamesMedieval
+        </h1>
+        <p class="hero-subtitle">
+            Создай своё королевство • Веди дипломатию • Строй империю
+        </p>
+        <p class="hero-subtitle">
+            Всё это в Minecrat!
+        </p>
+        <div class="hero-buttons">
+            <a href="{% url 'main:how_to_start' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-play"></i> Начать играть
+            </a>
+            <a href="{% url 'main:states' %}" class="btn btn-secondary btn-lg">
+                <i class="fas fa-flag"></i> Государства
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Кнопка Industrial (слева под меню) -->
+<a href="{% url 'main:industrial' %}" class="ind-small-btn">
+    <img src="{% static 'images/industrial_logo_text.png' %}" alt="Industrial">
+</a>
+
+<!-- О сервере -->
+<section class="section about" id="about">
+    <div class="container">
+        <h2 class="section-title scroll-reveal">
+            <i class="fas fa-scroll"></i> О сервере
+        </h2>
+        <div class="about-grid">
+            <div class="about-text scroll-reveal">
+                <p class="about-intro">
+                    Добро пожаловать в <strong>GeoGamesMedieval</strong> — уникальный Minecraft сервер
+                    в стиле средневековья, где каждый игрок может стать правителем, дипломатом и
+                    торговцем.
+                </p>
+                <ul class="about-features">
+                    <li><i class="fas fa-check-circle"></i> <strong>Государства</strong> — объединяйтесь с друзьями и стройте королевства</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Дипломатия</strong> — заключайте союзы, ведите переговоры или сражайтесь</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Экономика</strong> — развивайте торговлю, создавайте рынки и валюту</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Творчество</strong> — стройте замки, города и невероятные сооружения</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Ролевая игра</strong> — погружайтесь в атмосферу средневековья</li>
+                </ul>
+            </div>
+            <div class="about-stats scroll-reveal">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Участников</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-flag"></i>
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Государств</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar"></i>
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Работа сервера</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Галерея сервера -->
+<section class="server-gallery">
+    <div class="gallery-container">
+
+        <h2 class="gallery-title">
+            <i class="fas fa-images"></i> Галерея сервера
+        </h2>
+
+        <!-- Кнопки навигации (теперь строго над скринами) -->
+        <div class="gallery-controls">
+            <button class="gallery-btn prev-btn" onclick="moveGallery(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="gallery-btn next-btn" onclick="moveGallery(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Лента скриншотов -->
+        <div class="gallery-track" id="galleryTrack">
+            <div class="gallery-slide" onclick="openLightbox(0)">
+                <img src="{% static 'images/gallery/screenshot1.png' %}" alt="Скриншот 1">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-slide" onclick="openLightbox(1)">
+                <img src="{% static 'images/gallery/screenshot2.png' %}" alt="Скриншот 2">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-slide" onclick="openLightbox(2)">
+                <img src="{% static 'images/gallery/screenshot3.png' %}" alt="Скриншот 3">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-slide" onclick="openLightbox(3)">
+                <img src="{% static 'images/gallery/screenshot4.png' %}" alt="Скриншот 4">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-slide" onclick="openLightbox(4)">
+                <img src="{% static 'images/gallery/screenshot5.png' %}" alt="Скриншот 5">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-slide" onclick="openLightbox(5)">
+                <img src="{% static 'images/gallery/screenshot6.png' %}" alt="Скриншот 4">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-slide" onclick="openLightbox(6)">
+                <img src="{% static 'images/gallery/screenshot7.png' %}" alt="Скриншот 4">
+                <div class="slide-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox (без рамок) -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+</div>
+
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Инициализация анимаций при скролле для главной страницы
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollReveal();
+});
+</script>
+{% endblock %}

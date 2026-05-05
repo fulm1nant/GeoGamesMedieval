@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Как начать — GeoGamesMedieval{% endblock %}
+
+{% block content %}
+<section class="section how-to-start" id="howToStart">
+    <div class="container">
+        <h1 class="section-title scroll-reveal">
+            <i class="fas fa-play-circle"></i> Как начать играть
+        </h1>
+        <p class="section-subtitle scroll-reveal">
+            Следуйте простой инструкции и присоединяйтесь к серверу за пару минут
+        </p>
+
+        <!-- Блок с IP сервера -->
+        <div class="ip-card scroll-reveal">
+            <div class="ip-header">
+                <i class="fas fa-server"></i>
+                <h3>Адрес сервера</h3>
+            </div>
+            <div class="ip-content">
+                <code class="ip-address" id="serverIP">GeoGamesMedieval.aternos.me:31833</code>
+                <button class="btn btn-copy" id="copyIP" data-clipboard-text="GeoGamesMedieval.aternos.me">
+                    <i class="fas fa-copy"></i> Копировать IP
+                </button>
+                <span class="copy-hint" id="copyHint">Нажмите, чтобы скопировать</span>
+            </div>
+        </div>
+                            <!-- Секция: Регистрация на сервер -->
+            <div class="discord-section scroll-reveal">
+                <div class="discord-card">
+                    <div class="discord-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="discord-content">
+                        <h3>Как попасть на сервер?</h3>
+                        <p>Для того чтобы присоединиться к игре, вам нужно:</p>
+                        <ol class="discord-steps">
+                            <li><i class="fas fa-check-circle"></i> Перейти на наш Discord-сервер</li>
+                            <li><i class="fas fa-check-circle"></i> Оставить заявку в канале <code>#регистрационная</code></li>
+                            <li><i class="fas fa-check-circle"></i> Пройти простую проверку и получить роль игрока</li>
+                            <li><i class="fas fa-check-circle"></i> Начать своё приключение!</li>
+                        </ol>
+                        <a href="https://discord.gg/jMdUfvjnYM" target="_blank" class="btn btn-discord">
+                            <i class="fab fa-discord"></i> Перейти в Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- Секция со сборками модов -->
+        <div class="mods-section scroll-reveal">
+            <h2 class="mods-title">
+                <i class="fas fa-download"></i>
+                Сборки модов
+            </h2>
+            <p class="mods-subtitle">
+                Скачайте необходимые файлы для игры на сервере
+            </p>
+
+            <div class="mods-grid">
+                <!-- Основная сборка -->
+                <div class="mod-card">
+                    <div class="mod-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="mod-name">Основная сборка</h3>
+                    <p class="mod-description">
+                        Полный пакет модов для игры на сервере. Включает все необходимые моды для средневековой атмосферы и геймплея.
+                    </p>
+                    <ul class="mod-features">
+                        <li><i class="fas fa-check"></i> Версия Minecraft 1.21.4</li>
+                        <li><i class="fas fa-check"></i> 15+ модов</li>
+                        <li><i class="fas fa-check"></i> Оптимизация производительности</li>
+                    </ul>
+                    <a href="/static/mods/GeoGamesMedieval-1.21.4.Fabric.rar" class="btn btn-accent btn-download" download>
+                        <i class="fas fa-download"></i>
+                        Скачать
+                    </a>
+                </div>
+
+                <!-- Аддон: Полная карта сервера -->
+                <div class="mod-card mod-card-addon">
+                    <div class="mod-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3 class="mod-name">Полная карта сервера</h3>
+                    <p class="mod-description">
+                        <strong>Файл для Xaero's WorldMap</strong> — дополнение, которое полностью открывает видимую карту сервера. Уже включает базовую мини-карту.
+                    </p>
+                    <ul class="mod-features">
+                        <li><i class="fas fa-check"></i> Вся карта исследована</li>
+                        <li><i class="fas fa-check"></i> Все регионы открыты</li>
+                        <li><i class="fas fa-check"></i> Удобная навигация</li>
+                        <li><i class="fas fa-check"></i> Не требует настроек</li>
+                    </ul>
+
+                    <div class="addon-install-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Установка:</strong> Распакуйте архив и поместите <strong>папку Xaero GGM</strong> в папку версии Minecraft <strong>до запуска игры</strong> со сборкой.</p>
+                    </div>
+
+                    <a href="/static/mods/Xaero GGM.rar" class="btn btn-accent btn-download" download>
+                        <i class="fas fa-download"></i>
+                        Скачать
+                    </a>
+                </div>
+            </div>
+
+            <div class="mods-note">
+                <i class="fas fa-info-circle"></i>
+                <p>После скачивания распакуйте архив СБОРКИ в папку <code>mods</code> вашего Minecraft</p>
+            </div>
+        </div>
+
+        <!-- Пошаговая инструкция -->
+        <div class="steps-container">
+            <div class="step scroll-reveal">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4><i class="fas fa-download"></i> Установите Minecraft</h4>
+                    <p>Убедитесь, что у вас установлен Minecraft Java Edition
+                       (версия 1.21.4 Fabric совместимая с сервером, так же для удобства рекомендуем использовать LegacyLauncher).</p>
+                </div>
+            </div>
+
+            <div class="step scroll-reveal">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4><i class="fas fa-network-wired"></i> Добавьте сервер</h4>
+                    <p>В главном меню игры нажмите <strong>Сетевая игра</strong> →
+                       <strong>Добавить сервер</strong>. В поле "Адрес сервера" вставьте скопированный IP.</p>
+                </div>
+            </div>
+
+            <div class="step scroll-reveal">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4><i class="fas fa-flag"></i> Начните своё приключение!</h4>
+                    <p>Исследуйте мир, находите союзников, создавайте своё государство
+                       и пишите историю GeoGamesMedieval!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollReveal();
+
+    const copyBtn = document.getElementById('copyIP');
+    const copyHint = document.getElementById('copyHint');
+    const serverIP = document.getElementById('serverIP').textContent;
+
+    copyBtn.addEventListener('click', async function() {
+        try {
+            await navigator.clipboard.writeText(serverIP);
+
+            const originalIcon = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Скопировано!';
+            copyBtn.classList.add('success');
+            copyHint.textContent = 'IP скопирован в буфер обмена!';
+
+            setTimeout(() => {
+                copyBtn.innerHTML = originalIcon;
+                copyBtn.classList.remove('success');
+                copyHint.textContent = 'Нажмите, чтобы скопировать';
+            }, 2000);
+        } catch (err) {
+            const textArea = document.createElement('textarea');
+            textArea.value = serverIP;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            copyHint.textContent = 'IP скопирован!';
+            setTimeout(() => {
+                copyHint.textContent = 'Нажмите, чтобы скопировать';
+            }, 2000);
+        }
+    });
+});
+</script>
+{% endblock %}

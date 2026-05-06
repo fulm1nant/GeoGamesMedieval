@@ -16,7 +16,10 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://*']
+CSRF_TRUSTED_ORIGINS = [
+    'https://geogamesmedieval.su',
+    'https://*.up.railway.app',
+]
 
 # Application definition
 INSTALLED_APPS = [

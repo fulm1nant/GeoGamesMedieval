@@ -14,15 +14,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-key-change-in-p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = [
-    'www.geogamesmedieval.su',
-    'y1gs6rkl.up.railway.app',
-]
+ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://www.geogamesmedieval.su',
-    'https://y1gs6rkl.up.railway.app',
-]
+CSRF_TRUSTED_ORIGINS = ['https://*']
 
 # Application definition
 INSTALLED_APPS = [

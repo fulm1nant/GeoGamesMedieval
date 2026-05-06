@@ -2,15 +2,14 @@ import reversion
 from django.contrib import admin
 from .models import Country, Region, CountryAccess, Alliance
 
-# ✅ 1. Регистрируем МОДЕЛИ для отслеживания истории
+# ✅ Регистрируем модели для отслеживания истории
 reversion.register(Country)
 reversion.register(Region)
 reversion.register(Alliance)
 
 
-# ✅ 2. Наследуем админки от reversion.VersionAdmin (вместо admin.ModelAdmin)
 @admin.register(Country)
-class CountryAdmin(reversion.VersionAdmin):
+class CountryAdmin(admin.ModelAdmin):
     list_display = ('name', 'current_ruler', 'slug', 'order')
     search_fields = ('name', 'slug')
     prepopulated_fields = {"slug": ("name",)}
@@ -42,7 +41,7 @@ class CountryAdmin(reversion.VersionAdmin):
 
 
 @admin.register(Region)
-class RegionAdmin(reversion.VersionAdmin):
+class RegionAdmin(admin.ModelAdmin):
     list_display = ('name', 'country')
     list_filter = ('country',)
 
@@ -73,11 +72,11 @@ class RegionAdmin(reversion.VersionAdmin):
 
 
 @admin.register(CountryAccess)
-class CountryAccessAdmin(admin.ModelAdmin):  # Обычный ModelAdmin, историю тут не нужно
+class CountryAccessAdmin(admin.ModelAdmin):
     list_display = ('user', 'country')
 
 
 @admin.register(Alliance)
-class AllianceAdmin(reversion.VersionAdmin):
+class AllianceAdmin(admin.ModelAdmin):
     list_display = ('name', 'alliance_type')
     filter_horizontal = ('members',)

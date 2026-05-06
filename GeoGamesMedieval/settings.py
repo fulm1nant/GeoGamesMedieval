@@ -17,15 +17,13 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 # Разрешенные хосты (читает из переменных Railway)
 ALLOWED_HOSTS = [
     'www.geogamesmedieval.su',
-    '.railway.app',
+    'y1gs6rkl.up.railway.app',
 ]
 
 # Доверенные источники для CSRF (обязательно для Railway!)
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.up.railway.app',
-    'https://*.railway.app',
-    'https://yourdomain.com',
-    'https://*.yourdomain.com',
+    'https://www.geogamesmedieval.su',
+    'https://y1gs6rkl.up.railway.app',
 ]
 
 # Application definition

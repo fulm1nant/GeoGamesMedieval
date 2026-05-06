@@ -36,18 +36,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'whitenoise.runserver_nostatic',
+    'reversion',  # ✅ ДОБАВЛЕНО: для истории изменений
 ]
 
-# MIDDLEWARE (ОБЪЯВЛЯЕТСЯ ТОЛЬКО ОДИН РАЗ!)
+# MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # WhiteNoise для статики
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'reversion.middleware.RevisionMiddleware',  # ✅ ДОБАВЛЕНО: для истории изменений
 ]
 
 ROOT_URLCONF = 'GeoGamesMedieval.urls'
@@ -79,13 +81,13 @@ if os.environ.get('DATABASE_URL'):
         )
     }
 else:
-    # Fallback на SQLite для локальной разработки или если база ещё не готова
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -100,24 +102,23 @@ TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ] if os.path.exists(os.path.join(BASE_DIR, 'static')) else []
 
-# WhiteNoise для статики
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Настройки для продакшена (Railway/Render)
+# Production settings
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Логирование (поможет видеть ошибки)
+# Logging
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'whitenoise.runserver_nostatic',
-    'reversion',  # ✅ ДОБАВЛЕНО: для истории изменений
+    'reversion',  #для истории изменений
 ]
 
 # MIDDLEWARE
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'reversion.middleware.RevisionMiddleware',  # ✅ ДОБАВЛЕНО: для истории изменений
+    'reversion.middleware.RevisionMiddleware',  #для истории изменений
 ]
 
 ROOT_URLCONF = 'GeoGamesMedieval.urls'
